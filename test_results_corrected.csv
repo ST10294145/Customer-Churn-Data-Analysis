@@ -1,0 +1,4 @@
+Model,Strategy,Accuracy,Precision,Recall,F1-Score,AUC-ROC
+Logistic Regression,SMOTENC,0.7551,0.5273,0.7487,0.6188,0.8435
+Random Forest,Class weight,0.7722,0.554,0.7273,0.6289,0.8502
+LightGBM,Class weight,0.758,0.5297,0.7861,0.6329,0.8532

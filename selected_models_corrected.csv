@@ -1,0 +1,4 @@
+Model,Selected strategy,CV F1 mean,CV F1 std,Selected hyperparameters
+Logistic Regression,SMOTENC,0.6469,0.0147,"{'C': 0.01, 'max_iter': 1000, 'solver': 'lbfgs'}"
+Random Forest,Class weight,0.6503,0.0174,"{'max_depth': 10, 'min_samples_split': 2, 'n_estimators': 100}"
+LightGBM,Class weight,0.6405,0.0142,"{'learning_rate': 0.05, 'max_depth': -1, 'n_estimators': 100, 'num_leaves': 31}"

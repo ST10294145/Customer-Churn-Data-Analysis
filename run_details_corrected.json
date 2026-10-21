@@ -1,0 +1,76 @@
+{
+  "python": "3.11.6",
+  "pandas": "3.0.1",
+  "numpy": "2.4.2",
+  "scikit-learn": "1.8.0",
+  "imbalanced-learn": "0.14.2",
+  "lightgbm": "4.7.0",
+  "shap": "0.51.0",
+  "seed": 42,
+  "train_test_split": "stratified 80/20 on Churn Value",
+  "cv": "RepeatedStratifiedKFold, 5 folds x 3 repeats, random_state=42",
+  "scoring": [
+    "f1",
+    "roc_auc",
+    "precision",
+    "recall"
+  ],
+  "refit_metric": "f1",
+  "positive_class": 1,
+  "threshold": 0.5,
+  "strategies": [
+    "None",
+    "Class weight",
+    "SMOTE",
+    "SMOTENC"
+  ],
+  "param_grids": {
+    "Logistic Regression": {
+      "C": [
+        0.01,
+        0.1,
+        1,
+        10
+      ],
+      "solver": [
+        "lbfgs"
+      ],
+      "max_iter": [
+        1000
+      ]
+    },
+    "Random Forest": {
+      "n_estimators": [
+        100,
+        200
+      ],
+      "max_depth": [
+        null,
+        10,
+        20
+      ],
+      "min_samples_split": [
+        2,
+        5
+      ]
+    },
+    "LightGBM": {
+      "n_estimators": [
+        100,
+        200
+      ],
+      "max_depth": [
+        -1,
+        10
+      ],
+      "learning_rate": [
+        0.05,
+        0.1
+      ],
+      "num_leaves": [
+        31,
+        50
+      ]
+    }
+  }
+}

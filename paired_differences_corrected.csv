@@ -1,0 +1,10 @@
+Model,Strategy vs None,F1 diff mean,F1 diff std,Folds where strategy higher (F1),ROC AUC diff mean,ROC AUC diff std
+Logistic Regression,Class weight,0.0204,0.0189,14 of 15,-0.0001,0.0003
+Logistic Regression,SMOTE,0.024,0.0198,13 of 15,-0.0008,0.0013
+Logistic Regression,SMOTENC,0.0251,0.017,15 of 15,-0.0049,0.0023
+Random Forest,Class weight,0.0583,0.0219,15 of 15,0.0005,0.0029
+Random Forest,SMOTE,0.0562,0.0213,15 of 15,0.0012,0.0033
+Random Forest,SMOTENC,0.0576,0.0236,15 of 15,-0.0017,0.0041
+LightGBM,Class weight,0.0432,0.0172,15 of 15,0.0006,0.0021
+LightGBM,SMOTE,0.0395,0.0159,15 of 15,0.0001,0.003
+LightGBM,SMOTENC,0.0416,0.0186,15 of 15,-0.0032,0.0048
