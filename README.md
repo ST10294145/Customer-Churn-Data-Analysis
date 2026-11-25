@@ -19,20 +19,24 @@ Each model was tested with four ways of handling the class imbalance (about 26.5
 
 ## Dataset
 
-* Source: IBM Telco Customer Churn (extended version)
+* Source: IBM Telco Customer Churn (extended version), included as Telco_customer_churn.xlsx
 * 7,043 customers and 33 original columns
 * 13 columns were removed before modelling, including IDs, location columns and columns that leak the outcome (for example Churn Label)
 * The cleaned file used for modelling is cleaned_churn_data.csv (7,043 rows, 20 columns)
-
-The raw Excel file is not included in this repo.
 
 ## Project Structure
 
 | File | Purpose |
 | --- | --- |
+| Telco_customer_churn.xlsx | Raw dataset |
 | churn_data.ipynb | Exploratory data analysis and the first preprocessing step (dropping excluded columns) |
-| churn_modeling.ipynb | Train/test split, pipelines, tuning, evaluation, SHAP and uncertainty checks |
 | cleaned_churn_data.csv | Cleaned dataset used by the modelling notebook |
+| churn_modeling.ipynb | Train/test split, pipelines, tuning, evaluation, SHAP and uncertainty checks |
+| cv_summary_corrected.csv | Best cross validation scores for every model and strategy |
+| paired_differences_corrected.csv | Fold by fold comparison of each strategy against the baseline |
+| selected_models_corrected.csv | Final strategy and hyperparameters chosen for each model |
+| test_results_corrected.csv | Final test set results for the three selected models |
+| run_details_corrected.json | Parameter grids, CV setup, seed and package versions |
 | Diagrams/ | Saved charts from both notebooks |
 
 ## Method
@@ -66,7 +70,7 @@ LightGBM scored highest on F1 and ROC AUC, but all three models were very close 
 1. Clone the repo
 2. Install the packages:
 
-   pip install pandas numpy scikit-learn imbalanced-learn lightgbm shap matplotlib
+   pip install pandas numpy scikit-learn imbalanced-learn lightgbm shap matplotlib openpyxl
 
 3. Run churn_data.ipynb first, then churn_modeling.ipynb
 
